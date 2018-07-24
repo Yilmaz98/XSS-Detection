@@ -1,0 +1,4 @@
+<spider root='http://vicnum.ciphertechs.com/guessnum.html'>
+	<url type='anchor'>http://vicnum.ciphertechs.com/guessnum.html</url>
+	<url type='MetaLink'>http://vicnum.ciphertechs.com//favicon.ico</url>
+</spider>
